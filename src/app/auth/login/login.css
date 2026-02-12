@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f6f5f7;
+}
+
+.container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+              0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 850px;
+  max-width: 100%;
+  min-height: 500px;
+  margin: 60px auto;
+  display: flex;
+}
+
+/* LEFT SIDE */
+.form-container {
+  background: #ffffff;
+  padding: 50px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #5f5fc4;
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+  color: #555;
+}
+
+input {
+  background: #f0f0f0;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 12px 45px;
+  background: linear-gradient(90deg, #6a5acd, #ff7eb3);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.forgot {
+  font-size: 12px;
+  color: #888;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.overlay-container {
+  width: 50%;
+  background: linear-gradient(135deg, #6a5acd, #ff7eb3);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.overlay h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.overlay p {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.ghost {
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 12px 45px;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

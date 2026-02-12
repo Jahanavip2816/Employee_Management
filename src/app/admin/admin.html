@@ -1,0 +1,44 @@
+<div class="container">
+
+  <!-- LEFT SIDE: Employee Table -->
+  <div class="form-container sign-in-container">
+    <h1>Employee Submissions</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Work Mode</th>
+          <th>Hours</th>
+          <th>Status</th>
+          <th>Attendance</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employees">
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.workMode }}</td>
+          <td>{{ emp.hours }}</td>
+          <td>{{ emp.status }}</td>
+          <td>{{ emp.attendance }}</td>
+          <td>
+            <button (click)="approve(emp)">Approve</button>
+            <button (click)="reject(emp)">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" class="ghost" (click)="logout()">Logout</button>
+  </div>
+
+  <!-- RIGHT SIDE: Admin Info Panel -->
+  <div class="overlay-container">
+    <div class="overlay">
+      <h1>HR Admin Panel</h1>
+      <p>Approve or reject employee submissions</p>
+    </div>
+  </div>
+
+</div>

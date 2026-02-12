@@ -1,0 +1,47 @@
+<div class="container">
+
+  <!-- LEFT SIDE: Add Work -->
+  <div class="form-container sign-in-container">
+    <form (ngSubmit)="submitWork()">
+      <h1>Submit Work</h1>
+
+      <input type="text" placeholder="Full Name" [(ngModel)]="employee.name" name="name" required />
+
+      <select [(ngModel)]="employee.workMode" name="workMode">
+        <option value="Office">Office</option>
+        <option value="Work From Home">Work From Home</option>
+      </select>
+
+      <input type="text" placeholder="Working Hours" [(ngModel)]="employee.hours" name="hours" />
+      <textarea placeholder="Work Status" [(ngModel)]="employee.status" name="status"></textarea>
+
+      <select [(ngModel)]="employee.attendance" name="attendance">
+        <option value="Present">Present</option>
+        <option value="On Leave">On Leave</option>
+      </select>
+
+      <input type="file" (change)="onFileSelected($event)" />
+
+      <button type="submit">Submit Work</button>
+      <button type="button" class="ghost" (click)="logout()">Logout</button>
+    </form>
+  </div>
+
+  <!-- RIGHT SIDE: Submitted Work -->
+  <div class="overlay-container">
+    <div class="overlay">
+      <h1>Work Submissions</h1>
+      <p>Check all tasks you submitted</p>
+
+      <div *ngFor="let emp of employeesList" class="card">
+        <h3>{{ emp.name }}</h3>
+        <p><strong>Mode:</strong> {{ emp.workMode }}</p>
+        <p><strong>Hours:</strong> {{ emp.hours }}</p>
+        <p><strong>Status:</strong> {{ emp.status }}</p>
+        <p><strong>Attendance:</strong> {{ emp.attendance }}</p>
+        <p *ngIf="emp.file"><strong>File:</strong> {{ emp.file }}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

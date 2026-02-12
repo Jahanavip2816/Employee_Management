@@ -1,0 +1,35 @@
+<div class="container">
+
+  <!-- LEFT SIDE: Register Form -->
+  <div class="form-container sign-in-container">
+    <form (ngSubmit)="register()">
+      <h1>Create Account</h1>
+
+      <input type="text" placeholder="Name" [(ngModel)]="user.name" name="name" required />
+      <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" required />
+      <input type="password" placeholder="Password" [(ngModel)]="user.password" name="password" required />
+
+      <select [(ngModel)]="user.role" name="role">
+        <option value="User">User</option>
+        <option value="Admin">Admin</option>
+      </select>
+
+      <button type="submit">SIGN UP</button>
+
+      <p class="switch-link">
+        Already have an account?
+        <a (click)="goToLogin()" style="cursor:pointer;color:blue;">Login</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- RIGHT SIDE: Welcome Panel -->
+  <div class="overlay-container">
+    <div class="overlay">
+      <h1>Welcome!</h1>
+      <p>Sign up and manage your employee account</p>
+      <button class="ghost" (click)="goToLogin()">SIGN IN</button>
+    </div>
+  </div>
+
+</div>

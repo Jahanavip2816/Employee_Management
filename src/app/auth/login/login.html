@@ -1,0 +1,34 @@
+<div class="container">
+
+  <!-- LEFT SIDE: Sign In Form -->
+  <div class="form-container sign-in-container">
+    <form (ngSubmit)="login()">
+      <h1>Sign In</h1>
+
+      <div class="social-container">
+        <a href="#">F</a>
+        <a href="#">G+</a>
+        <a href="#">in</a>
+      </div>
+
+      <span>or use your email account</span>
+
+      <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
+
+      <a class="forgot">Forgot your password?</a>
+
+      <button type="submit">SIGN IN</button>
+    </form>
+  </div>
+
+  <!-- RIGHT SIDE: Welcome Panel -->
+  <div class="overlay-container">
+    <div class="overlay">
+      <h1>Welcome Back!</h1>
+      <p>Enter personal details to your employee account</p>
+      <button (click)="goToRegister()">SIGN UP</button>
+    </div>
+  </div>
+
+</div>
