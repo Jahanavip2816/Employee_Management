@@ -197,4 +197,48 @@ button.ghost:hover {
   font-size: 14px;
   opacity: 0.9;
 }
+/* your existing CSS above */
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    width: 95%;
+    margin: 20px auto;
+    min-height: auto;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .overlay-container {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+}
+
 
