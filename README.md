@@ -1,59 +1,116 @@
-# AccountAccess
+## Employee Work Submission System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+A responsive Employee Work Submission and Dashboard system built using Angular.
+This application allows employees to submit their daily work details and provides a clean dashboard interface.
 
-## Development server
+## Features
 
-To start a local development server, run:
+🔴 Employee work submission form
 
-```bash
+🔴Clean and professional UI
+
+🔴 Fully responsive (Desktop + Mobile view)
+
+🔴 File upload support
+
+🔴 Modern gradient dashboard panel
+
+🔴 Form validation ready structure
+
+## Desktop View
+
+🔴 Side-by-side layout
+
+🔴Form on the left
+
+🔴 Dashboard panel on the right
+
+🔴Professional card design with shadow
+
+## Mobile View
+
+🔴Fully responsive layout
+
+🔴Stacked vertical design
+
+🔴Mobile-friendly input sizes
+
+🔴Full-width buttons for easy tapping
+
+## Technologies Used
+
+Angular
+
+TypeScript
+
+HTML5
+
+CSS3 (Flexbox + Media Queries)
+
+## 📂 Project Structure
+src/
+ ├── app/
+ │    ├── dashboard/
+ │    │     ├── dashboard.component.html
+ │    │     ├── dashboard.component.css
+ │    │     ├── dashboard.component.ts
+ │
+ ├── index.html
+
+##  Installation & Setup
+🔴 Clone the repository
+git clone <your-repository-url>
+
+🔴 Navigate to project folder
+cd project-name
+
+🔴 Install dependencies
+npm install
+
+🔴 Run the project
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser and go to:
 
-## Code scaffolding
+http://localhost:4200
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Testing Responsive Design
 
-```bash
-ng generate component component-name
-```
+Open the project in Chrome
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Press F12
 
-```bash
-ng generate --help
-```
+Click the Toggle Device Toolbar icon
 
-## Building
+Select a mobile device
 
-To build the project run:
+## UI Design Highlights
 
-```bash
-ng build
-```
+🔴 Clean card-based layout
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+🔴 Smooth focus effects on input fields
 
-## Running unit tests
+🔴 Gradient action buttons
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+🔴 Soft shadows for modern look
 
-```bash
-ng test
-```
+🔴 Professional spacing and alignment
 
-## Running end-to-end tests
+## Future Improvements
 
-For end-to-end (e2e) testing, run:
+🔴 Add authentication (Login/Register)
 
-```bash
-ng e2e
-```
+🔴 Connect to backend (Node.js / Spring Boot)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+🔴 Database integration (MySQL / MongoDB)
 
-## Additional Resources
+🔴 Admin approval dashboard
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🔴 Form validation messages
+
+🔴 Deployment to cloud (Netlify / Firebase / AWS)
+
+## Author
+
+P. Jahanavi
+Full Stack Developer
