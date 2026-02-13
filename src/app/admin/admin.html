@@ -1,6 +1,5 @@
 <div class="container">
 
-  <!-- LEFT SIDE: Employee Table -->
   <div class="form-container sign-in-container">
     <h1>Employee Submissions</h1>
 
@@ -23,8 +22,10 @@
           <td>{{ emp.status }}</td>
           <td>{{ emp.attendance }}</td>
           <td>
-            <button (click)="approve(emp)">Approve</button>
-            <button (click)="reject(emp)">Reject</button>
+            <button *ngIf="!emp.actionStatus" (click)="approve(emp)">Approve</button>
+            <button *ngIf="!emp.actionStatus" (click)="reject(emp)">Reject</button>
+
+            <span *ngIf="emp.actionStatus">{{ emp.actionStatus }}</span>
           </td>
         </tr>
       </tbody>
@@ -33,7 +34,6 @@
     <button type="button" class="ghost" (click)="logout()">Logout</button>
   </div>
 
-  <!-- RIGHT SIDE: Admin Info Panel -->
   <div class="overlay-container">
     <div class="overlay">
       <h1>HR Admin Panel</h1>

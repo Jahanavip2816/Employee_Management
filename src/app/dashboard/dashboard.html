@@ -1,9 +1,9 @@
 <div class="container">
 
-  <!-- LEFT SIDE: Add Work -->
+  <!-- LEFT SIDE: Work Form -->
   <div class="form-container sign-in-container">
-    <form (ngSubmit)="submitWork()">
-      <h1>Submit Work</h1>
+    <form (ngSubmit)="employee.id ? updateWork() : submitWork()">
+      <h1>{{ employee.id ? 'Edit Work' : 'Submit Work' }}</h1>
 
       <input type="text" placeholder="Full Name" [(ngModel)]="employee.name" name="name" required />
 
@@ -22,24 +22,24 @@
 
       <input type="file" (change)="onFileSelected($event)" />
 
-      <button type="submit">Submit Work</button>
+      <button type="submit">{{ employee.id ? 'Update Work' : 'Submit Work' }}</button>
       <button type="button" class="ghost" (click)="logout()">Logout</button>
     </form>
   </div>
 
-  <!-- RIGHT SIDE: Submitted Work -->
+  <!-- RIGHT SIDE: Optional Info Panel -->
   <div class="overlay-container">
     <div class="overlay">
-      <h1>Work Submissions</h1>
-      <p>Check all tasks you submitted</p>
+      <h1>Employee Dashboard</h1>
+      <p>Click on a submission to edit it.</p>
 
-      <div *ngFor="let emp of employeesList" class="card">
-        <h3>{{ emp.name }}</h3>
-        <p><strong>Mode:</strong> {{ emp.workMode }}</p>
-        <p><strong>Hours:</strong> {{ emp.hours }}</p>
-        <p><strong>Status:</strong> {{ emp.status }}</p>
-        <p><strong>Attendance:</strong> {{ emp.attendance }}</p>
-        <p *ngIf="emp.file"><strong>File:</strong> {{ emp.file }}</p>
+      <div *ngFor="let sub of submissions" class="card" (click)="editWork(sub)" style="cursor:pointer;">
+        <h3>{{ sub.name }}</h3>
+        <p><strong>Mode:</strong> {{ sub.workMode }}</p>
+        <p><strong>Hours:</strong> {{ sub.hours }}</p>
+        <p><strong>Status:</strong> {{ sub.status }}</p>
+        <p><strong>Attendance:</strong> {{ sub.attendance }}</p>
+        <p *ngIf="sub.file"><strong>File:</strong> {{ sub.file }}</p>
       </div>
     </div>
   </div>

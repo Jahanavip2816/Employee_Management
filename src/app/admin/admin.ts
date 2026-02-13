@@ -1,27 +1,35 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports:[CommonModule],
+  imports: [CommonModule],
   templateUrl: './admin.html',
   styleUrls: ['./admin.css']
 })
 export class AdminComponent {
-  employees = [
-    { name: 'Jahanavi', workMode: 'Work From Home', hours: '9AM - 6PM', status: 'Completed API integration', attendance: 'Present' },
-    { name: 'Rahul', workMode: 'Office', hours: '10AM - 7PM', status: 'On leave request', attendance: 'On Leave' }
-  ];
+  constructor(private router: Router) { }
 
-  constructor(private router: Router) {}
+  employees: any[] = JSON.parse(localStorage.getItem('submissions') || '[]');
 
-  approve(emp: any) { alert(emp.name + " Approved"); }
-  reject(emp: any) { alert(emp.name + " Rejected"); }
+  approve(emp: any) {
+    emp.actionStatus = 'Approved';
+    this.saveSubmissions();
+  }
+
+  reject(emp: any) {
+    emp.actionStatus = 'Rejected';
+    this.saveSubmissions();
+  }
 
   logout() {
     localStorage.clear();
     this.router.navigate(['/login']);
+  }
+
+  saveSubmissions() {
+    localStorage.setItem('submissions', JSON.stringify(this.employees));
   }
 }
