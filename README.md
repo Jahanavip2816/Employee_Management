@@ -48,6 +48,7 @@ HTML5
 CSS3 (Flexbox + Media Queries)
 
 ## 📂 Project Structure
+
 src/
  ├── app/
  │    ├── dashboard/
